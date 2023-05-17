@@ -10,15 +10,16 @@ metadata:
   - web
   - tanzu
   - kubernetes
+  - guy
   annotations:
     backstage.io/kubernetes-label-selector: app.kubernetes.io/part-of=hungry-panda
     backstage.io/techdocs-ref: dir:.
   links:
-  - url: http://hungry-panda.apps.tap-guy-lab-p8m8nm3rts18.ts-cna.com/hello/
+  - url: https://guy-example-web-app.apps.guy-tap.terasky.demo/hello/
     name: Hello-World
-  - url: http://hungry-panda.apps.tap-guy-lab-p8m8nm3rts18.ts-cna.com/hello/welcome
+  - url: https://guy-example-web-app.apps.guy-tap.terasky.demo/hello/welcome
     name: Welcome
-  - url: http://hungry-panda.apps.tap-guy-lab-p8m8nm3rts18.ts-cna.com/k8s/
+  - url: https://guy-example-web-app.apps.guy-tap.terasky.demo/k8s/
     name: K8S-spec
 spec:
   type: service

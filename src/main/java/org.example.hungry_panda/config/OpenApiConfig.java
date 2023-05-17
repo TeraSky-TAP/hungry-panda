@@ -19,7 +19,7 @@ public class OpenApiConfig {
         String[] paths = { "/hello/**", "/k8s/**" };
         return GroupedOpenApi.builder()
         .group(appVersion)
-        .addOpenApiCustomiser(openApi -> openApi.info(new Info().title("Lazy Koala API").version(appVersion)))
+        .addOpenApiCustomiser(openApi -> openApi.info(new Info().title("Hungry Panda API").version(appVersion)))
         .pathsToMatch(paths)
         .build();
     }
