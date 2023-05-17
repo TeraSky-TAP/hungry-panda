@@ -23,7 +23,6 @@ spec:
       autoscaling.knative.dev/minScale: "1"
   - name: testing_pipeline_matching_labels
     value:
-      apps.tanzu.vmware.com/framework: maven
       apps.tanzu.vmware.com/pipeline: test
   - name: api_descriptor
     value:
@@ -37,5 +36,4 @@ spec:
     git:
       ref:
         branch: main
-      url: https://github.com/vmware-tanzu/application-accelerator-samples.git
-    subPath: tanzu-java-web-app
+      url: https://github.com/GuyBalmas/hungry-panda.git
