@@ -35,5 +35,5 @@ spec:
   source:
     git:
       ref:
-        branch: main
+        branch: master
       url: https://github.com/GuyBalmas/hungry-panda.git
