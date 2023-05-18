@@ -15,11 +15,11 @@ metadata:
     backstage.io/kubernetes-label-selector: app.kubernetes.io/part-of=hungry-panda
     backstage.io/techdocs-ref: dir:.
   links:
-  - url: https://guy-example-web-app.apps.guy-tap.terasky.demo/hello/
+  - url: https://hungry-panda.apps.guy-tap.terasky.demo/hello/
     name: Hello-World
-  - url: https://guy-example-web-app.apps.guy-tap.terasky.demo/hello/welcome
+  - url: https://hungry-panda.apps.guy-tap.terasky.demo/hello/welcome
     name: Welcome
-  - url: https://guy-example-web-app.apps.guy-tap.terasky.demo/k8s/
+  - url: https://hungry-panda.apps.guy-tap.terasky.demo/k8s/
     name: K8S-spec
 spec:
   type: service
