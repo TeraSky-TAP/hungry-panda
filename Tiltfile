@@ -1,4 +1,4 @@
-SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", 'harbor.vrabbi.cloud/guylab/hungry-panda-source')
+SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", 'harbor.vrabbi.cloud/guy-lab/hungry-panda-source')
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
 NAMESPACE = os.getenv("NAMESPACE", default='apps')
 OUTPUT_TO_NULL_COMMAND = os.getenv("OUTPUT_TO_NULL_COMMAND", default=' > /dev/null ')
