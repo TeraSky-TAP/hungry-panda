@@ -32,12 +32,12 @@ spec:
       owner: cloud-native-applications-team
       system: hungry-pandas
       description: A set of API endpoints to view k8s data of hungry-panda application.
-  serviceClaims:
-  - name: rmq
-    ref:
-      apiVersion: services.apps.tanzu.vmware.com/v1alpha1
-      kind: ClassClaim
-      name: mysql-1
+#  serviceClaims:
+#  - name: rmq
+#    ref:
+#      apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+#      kind: ClassClaim
+#      name: mysql-1
   source:
     git:
       ref:
