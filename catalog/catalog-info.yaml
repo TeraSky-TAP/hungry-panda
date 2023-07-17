@@ -20,7 +20,7 @@ spec:
   type: service
   lifecycle: experimental
   providesApis:
-    - "apps/hungry-panda-guy-tkg-tap1-cls.terasky.demo"
+    - "apps/hungry-panda-api"
   owner: cloud-native-applications-team
   system: hungry-pandas
   providesResources:
