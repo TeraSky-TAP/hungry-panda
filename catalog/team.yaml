@@ -1,4 +1,42 @@
-
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: guybal
+spec:
+  profile:
+    displayName: Guy Balmas
+    email: guyb@terasky.com
+    # picture: https://example.com/staff/jenny-with-party-hat.jpeg
+  memberOf:
+    - cloud-native-applications-team
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: cloud-native-applications-team
+spec:
+  type: team
+  profile:
+    displayName: Cloud Native Applications Team
+    email: cna-team@example.com
+    # picture: https://example.com/groups/cloud-native-applications-team.jpeg
+  parent: development
+  children: []
+  members:
+    - guybal
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: development
+spec:
+  type: department
+  profile:
+    displayName: Development Department
+    email: development@example.com
+    # picture: https://example.com/groups/development.jpeg
+  children:
+    - cloud-native-applications-team
 ---
 # system.yaml
 apiVersion: backstage.io/v1alpha1
@@ -9,7 +47,7 @@ spec:
   owner: cloud-native-applications-team
   type: application
   lifecycle: experimental
-  description: Hungry Pandas application system
+  description: Hungry Pandas Application
 ---
 # databases-domain.yaml
 apiVersion: backstage.io/v1alpha1
@@ -60,6 +98,7 @@ metadata:
     backstage.io/system: hungry-pandas
     backstage.io/domain: apps
     backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/part-of=hungry-panda
   links:
   - url: https://hungry-panda.apps.guy-tkg-tap1-cls.terasky.demo/hello/
     name: Hello-World

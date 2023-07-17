@@ -1,29 +1,69 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: hungry-panda
-  description: Tanzu Java Spring-Boot Web App, displaying kubernetes info on '/k8s' endpoint. Written by Guy Balmas.
-  tags:
-  - app-accelerator
-  - java-17
-  - spring
-  - web
-  - tanzu
-  - kubernetes
+  name: hungry-panda-dev
+  description: Backend service for the Hungry Panda application
   annotations:
-    backstage.io/kubernetes-label-selector: app.kubernetes.io/part-of=hungry-panda
+    backstage.io/managed-by: cloud-native-applications-team
+    backstage.io/system: hungry-pandas
+    backstage.io/domain: apps
     backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/part-of=hungry-panda
   links:
-  - url: https://hungry-panda.apps.guy-tkg-tap1-cls.terasky.demo/hello/
-    name: Hello-World
-  - url: https://hungry-panda.apps.guy-tkg-tap1-cls.terasky.demo/hello/welcome
-    name: Welcome
-  - url: https://hungry-panda.apps.guy-tkg-tap1-cls.terasky.demo/k8s/
-    name: K8S-spec
+    - url: https://hungry-panda.apps.guy-tkg-tap1-cls.terasky.demo/hello/
+      name: Hello-World
+    - url: https://hungry-panda.apps.guy-tkg-tap1-cls.terasky.demo/hello/welcome
+      name: Welcome
+    - url: https://hungry-panda.apps.guy-tkg-tap1-cls.terasky.demo/k8s/
+      name: K8S-spec
 spec:
   type: service
   lifecycle: experimental
+  providesApis:
+    - "apps/hungry-panda-dev"
   owner: cloud-native-applications-team
   system: hungry-pandas
-  providesApis:
-  - apps/hungry-panda-dev
+  providesResources:
+    - kind: api
+      name: hungry-panda-dev-api
+      description: REST API for the Hungry Panda application
+      spec:
+        type: rest
+        lifecycle: experimental
+        schema: openapi.yaml
+  dependencies:
+    - kind: component
+      name: database-service
+      relations:
+        - type: uses
+          target: database-service.postgresql
+
+#apiVersion: backstage.io/v1alpha1
+#kind: Component
+#metadata:
+#  name: hungry-panda
+#  description: Tanzu Java Spring-Boot Web App, displaying kubernetes info on '/k8s' endpoint. Written by Guy Balmas.
+#  tags:
+#  - app-accelerator
+#  - java-17
+#  - spring
+#  - web
+#  - tanzu
+#  - kubernetes
+#  annotations:
+#    backstage.io/kubernetes-label-selector: app.kubernetes.io/part-of=hungry-panda
+#    backstage.io/techdocs-ref: dir:.
+#  links:
+#  - url: https://hungry-panda.apps.guy-tkg-tap1-cls.terasky.demo/hello/
+#    name: Hello-World
+#  - url: https://hungry-panda.apps.guy-tkg-tap1-cls.terasky.demo/hello/welcome
+#    name: Welcome
+#  - url: https://hungry-panda.apps.guy-tkg-tap1-cls.terasky.demo/k8s/
+#    name: K8S-spec
+#spec:
+#  type: service
+#  lifecycle: experimental
+#  owner: cloud-native-applications-team
+#  system: hungry-pandas
+#  providesApis:
+#  - apps/hungry-panda-dev
