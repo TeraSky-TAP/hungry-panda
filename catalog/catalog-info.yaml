@@ -19,13 +19,13 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  providesApis:
-    - "apps/hungry-panda-guy-tkg-tap1-cls.terasky.demo"
+#  providesApis:
+#    - "apps/hungry-panda-guy-tkg-tap1-cls.terasky.demo"
   owner: cloud-native-applications-team
   system: hungry-pandas
   providesResources:
     - kind: api
-      name: hungry-panda-dev-api
+      name: hungry-panda-api
       description: REST API for the Hungry Panda application
       spec:
         type: rest
