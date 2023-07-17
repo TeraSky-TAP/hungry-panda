@@ -56,7 +56,8 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  providesApis: "apps/hungry-panda-dev"
+  providesApis: 
+    - "apps/hungry-panda-dev"
   owner: cloud-native-applications-team
   providesResources:
     - kind: api
