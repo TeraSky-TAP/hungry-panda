@@ -9,6 +9,7 @@ spec:
     email: cna-team@example.com
     # picture: https://example.com/groups/cloud-native-applications-team.jpeg
   parent: development
+  children: []
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
