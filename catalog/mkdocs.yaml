@@ -1,9 +1,5 @@
 site_name: hungry-panda
 nav:
 - Home: index.md
-
-#site_name: hungry-panda
-#nav:
-#- Home: index.md
-#plugins:
-#- techdocs-core
+plugins:
+- techdocs-core
