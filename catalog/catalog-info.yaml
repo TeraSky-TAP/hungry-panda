@@ -23,14 +23,14 @@ spec:
     - "apps/hungry-panda-api"
   owner: cloud-native-applications-team
   system: hungry-pandas
-  providesResources:
-    - kind: api
-      name: hungry-panda-api
-      description: REST API for the Hungry Panda application
-      spec:
-        type: rest
-        lifecycle: experimental
-        schema: openapi.yaml
+#  providesResources:
+#    - kind: api
+#      name: hungry-panda-api
+#      description: REST API for the Hungry Panda application
+#      spec:
+#        type: rest
+#        lifecycle: experimental
+#        schema: openapi.yaml
   dependencies:
     - kind: component
       name: database-service
