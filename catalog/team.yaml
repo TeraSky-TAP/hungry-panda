@@ -6,7 +6,7 @@ metadata:
 spec:
   name: Cloud Native Applications Team
   description: Team responsible for developing cloud-native applications
-
+---
 # system.yaml
 apiVersion: backstage.io/v1alpha1
 kind: System
@@ -17,7 +17,7 @@ spec:
   type: application
   lifecycle: experimental
   description: Hungry Pandas application system
-
+---
 # domain.yaml
 apiVersion: backstage.io/v1alpha1
 kind: Domain
@@ -28,7 +28,7 @@ spec:
   type: business
   lifecycle: experimental
   description: Business domain for cloud-native applications
-
+---
 # database-service.yaml
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -42,7 +42,7 @@ spec:
   type: service
   lifecycle: experimental
   owner: database-team
-
+---
 # hungry-panda-dev.yaml
 apiVersion: backstage.io/v1alpha1
 kind: Component
