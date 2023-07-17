@@ -10,6 +10,7 @@ spec:
     # picture: https://example.com/groups/cloud-native-applications-team.jpeg
   parent: development
   children: []
+  members: [guybal]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
