@@ -1,7 +1,24 @@
 apiVersion: backstage.io/v1alpha1
-kind: Team
+kind: Group
 metadata:
   name: cloud-native-applications-team
 spec:
-  name: Cloud Native Applications Team
-  description: Team responsible for developing cloud-native applications
+  type: team
+  profile:
+    displayName: Cloud Native Applications Team
+    email: cna-team@example.com
+    # picture: https://example.com/groups/cloud-native-applications-team.jpeg
+  parent: development
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: development
+spec:
+  type: department
+  profile:
+    displayName: Development Department
+    email: development@example.com
+    # picture: https://example.com/groups/development.jpeg
+  children: 
+    - cloud-native-applications-team
