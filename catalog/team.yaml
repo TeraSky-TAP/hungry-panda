@@ -1,10 +1,4 @@
-apiVersion: backstage.io/v1alpha1
-kind: Team
-metadata:
-  name: cloud-native-applications-team
-spec:
-  name: Cloud Native Applications Team
-  description: Team responsible for developing cloud-native applications
+
 ---
 # system.yaml
 apiVersion: backstage.io/v1alpha1
