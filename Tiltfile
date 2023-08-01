@@ -1,26 +1,24 @@
 SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", 'harbor.vrabbi.cloud/guy-lab/hungry-panda-source')
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
-NAMESPACE = os.getenv("NAMESPACE", default='apps')
-OUTPUT_TO_NULL_COMMAND = os.getenv("OUTPUT_TO_NULL_COMMAND", default=' > /dev/null ')
+NAMESPACE = os.getenv("NAMESPACE", default='default')
 
 k8s_custom_deploy(
     'hungry-panda',
-    apply_cmd="tanzu apps workload apply -f config/workload.yaml --debug --live-update" +
+    apply_cmd="tanzu apps workload apply -f config/workload.yaml --update-strategy replace --debug --live-update" +
                " --local-path " + LOCAL_PATH +
                " --source-image " + SOURCE_IMAGE +
                " --namespace " + NAMESPACE +
-               " --yes " +
-               OUTPUT_TO_NULL_COMMAND +
-               " && kubectl get workload hungry-panda --namespace " + NAMESPACE + " -o yaml",
+               " --yes --output yaml",
     delete_cmd="tanzu apps workload delete -f config/workload.yaml --namespace " + NAMESPACE + " --yes",
-    deps=['pom.xml', './target/classes'],
     container_selector='workload',
+
+    deps=['pom.xml', './target/classes'],
     live_update=[
       sync('./target/classes', '/workspace/BOOT-INF/classes')
-    ],
+    ]
 )
 
-allow_k8s_contexts(k8s_context())
+allow_k8s_contexts('tkg-tap1-cls-admin@tkg-tap1-cls')
 
 k8s_resource('hungry-panda', port_forwards=["8080:8080"],
-            extra_pod_selectors=[{'serving.knative.dev/service': 'hungry-panda'}])
+            extra_pod_selectors=[{'carto.run/workload-name': 'hungry-panda', 'app.kubernetes.io/component': 'run'}])
