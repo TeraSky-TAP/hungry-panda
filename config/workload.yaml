@@ -31,13 +31,20 @@ spec:
         path: "/api-docs"
       owner: cloud-native-applications-team
       system: hungry-pandas
-      description: "A set of API endpoints to view k8s data of hungry-panda application."
+      description: "A set of API endpoints to view k8s data of Hungry-Panda application."
 #  serviceClaims:
-#  - name: rmq
+#  - name: psql
 #    ref:
 #      apiVersion: services.apps.tanzu.vmware.com/v1alpha1
 #      kind: ClassClaim
-#      name: mysql-1
+#      name: psql-1
+  serviceClaims:
+  - name: db
+    ref:
+      # services.apps.tanzu.vmware.com/v1alpha1:ClassClaim:mysql-1
+      apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+      kind: ClassClaim
+      name: mysql-1
   source:
     git:
       ref:
