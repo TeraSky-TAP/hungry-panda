@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/k8s")
+@RequestMapping("/v1/k8s")
 public class KubernetesController {
     
     final static Logger logger = LoggerFactory.getLogger(KubernetesController.class);

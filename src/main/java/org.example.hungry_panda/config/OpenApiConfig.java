@@ -16,7 +16,7 @@ public class OpenApiConfig {
 
     @Bean
     public GroupedOpenApi helloOpenApi() {
-        String[] paths = { "/hello/**", "/k8s/**" };
+        String[] paths = {"/v1/**"}; // { "/hello/**", "/k8s/**" };
         return GroupedOpenApi.builder()
         .group(appVersion)
         .addOpenApiCustomiser(openApi -> openApi.info(new Info().title("Hungry Panda API").version(appVersion)))
