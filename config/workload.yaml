@@ -38,13 +38,13 @@ spec:
 #      apiVersion: services.apps.tanzu.vmware.com/v1alpha1
 #      kind: ClassClaim
 #      name: psql-1
-  serviceClaims:
-  - name: db
-    ref:
-      # services.apps.tanzu.vmware.com/v1alpha1:ClassClaim:mysql-1
-      apiVersion: services.apps.tanzu.vmware.com/v1alpha1
-      kind: ClassClaim
-      name: mysql-1
+#  serviceClaims:
+#  - name: db
+#    ref:
+#      # services.apps.tanzu.vmware.com/v1alpha1:ClassClaim:mysql-1
+#      apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+#      kind: ClassClaim
+#      name: psql-1
   source:
     git:
       ref:
