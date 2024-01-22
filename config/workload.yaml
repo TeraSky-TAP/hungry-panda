@@ -14,7 +14,7 @@ spec:
       value: "17"
   env:
   - name: GREETING_MSG
-    value: I'm a hungry Panda!
+    value: I'm a hungry Panda
   - name: GREETING_DESC
     value: I eat bamboo all day
   params:
@@ -32,12 +32,12 @@ spec:
       owner: cloud-native-applications-team
       system: hungry-pandas
       description: "A set of API endpoints to view k8s data of Hungry-Panda application."
-#  serviceClaims:
-#  - name: psql
-#    ref:
-#      apiVersion: services.apps.tanzu.vmware.com/v1alpha1
-#      kind: ClassClaim
-#      name: psql-1
+  serviceClaims:
+  - name: psql
+    ref:
+      apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+      kind: ClassClaim
+      name: psql-1
 #  serviceClaims:
 #  - name: db
 #    ref:
