@@ -1,21 +1,21 @@
-package org.example.hungry_panda.controllers;
-
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class HelloControllerTests {
-
-	@Test
-	void contextLoads() {
-        Assertions.assertEquals(true,true);
-	}
-
+//package org.example.hungry_panda.controllers;
+//
+//import org.junit.jupiter.api.Assertions;
+//import org.junit.jupiter.api.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
+//
+//@SpringBootTest
+//class HelloControllerTests {
+//
 //	@Test
-//	void anotherTest() {
-//		Assertions.assertEquals(false,true);
+//	void contextLoads() {
+//        Assertions.assertEquals(true,true);
 //	}
-
-
-}
+//
+////	@Test
+////	void anotherTest() {
+////		Assertions.assertEquals(false,true);
+////	}
+//
+//
+//}

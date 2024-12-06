@@ -11,7 +11,7 @@ spec:
   build:
     env:
     - name: BP_JVM_VERSION
-      value: "17"
+      value: "19"
   env:
   - name: GREETING_MSG
     value: I'm a hungry Panda
@@ -32,12 +32,12 @@ spec:
       owner: cloud-native-applications-team
       system: hungry-pandas
       description: "A set of API endpoints to view k8s data of Hungry-Panda application."
-  serviceClaims:
-  - name: psql
-    ref:
-      apiVersion: services.apps.tanzu.vmware.com/v1alpha1
-      kind: ClassClaim
-      name: psql-1
+#  serviceClaims:
+#  - name: psql
+#    ref:
+#      apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+#      kind: ClassClaim
+#      name: psql-1
 #  serviceClaims:
 #  - name: db
 #    ref:
@@ -49,4 +49,4 @@ spec:
     git:
       ref:
         branch: master
-      url: https://github.com/GuyBalmas/hungry-panda.git
+      url: https://github.com/TeraSky-TAP/hungry-panda.git

@@ -22,9 +22,9 @@ public class HelloController {
 	@GetMapping("/")
 	public String index() {
 		return HtmlTemplate.htmlLandingPage(
-				"Hello from Hungry-Panda!",
-				"a simple Java spring-Boot web application</br>",
-				"Application pod: '" + K8sHandler.getPodName() + "'</br> Namespace: '" + K8sHandler.getNamespace() + "'"
+			"Hello from Hungry-Panda!",
+			"a simple Java spring-Boot web application</br>",
+			"Application pod: '" + K8sHandler.getPodName() + "'</br> Namespace: '" + K8sHandler.getNamespace() + "'"
 		);
 	}
 
